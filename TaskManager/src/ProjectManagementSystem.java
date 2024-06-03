@@ -54,7 +54,7 @@ public class ProjectManagementSystem {
             System.out.print("\nWhich project would you like to add a task to? ");
             userProject = projects.get(input.nextInt() - 1);
         } else {
-            userProject = projects.get(0);
+            userProject = projects.getFirst();
             System.out.println("\nYou only have one project, automatically selecting " + userProject.getName() + " project");
         }
         userProject.print();
@@ -83,7 +83,7 @@ public class ProjectManagementSystem {
             System.out.print("\nWhich project would you like to add a task to? ");
             userProject = projects.get(input.nextInt() - 1);
         } else {
-            userProject = projects.get(0);
+            userProject = projects.getFirst();
             System.out.println("\nYou only have one project, automatically selecting " + userProject.getName() + " project");
         }
         userProject.print();
@@ -95,7 +95,7 @@ public class ProjectManagementSystem {
     }
 
     private void printProjects() {
-        if (projects.size() == 0) {
+        if (projects.isEmpty()) {
             System.out.println("\nYou haven't created any projects, creating one now");
             addProject();
             return;
