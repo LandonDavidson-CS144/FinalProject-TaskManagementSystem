@@ -8,8 +8,6 @@ belong to each project. Has methods to add default and dated tasks, find a tasks
 and remove a task from specified index.
  */
 
-package cs141.landon;
-
 import java.util.ArrayList;
 import java.util.Date;
 

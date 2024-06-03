@@ -7,8 +7,6 @@ Description: Abstract class that defines a basic printTask() method and an abstr
 editTask() method.
  */
 
-package cs141.landon;
-
 import java.util.Scanner;
 
 public abstract class Task {

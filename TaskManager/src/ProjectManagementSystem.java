@@ -7,8 +7,6 @@ Description: Main program to manage Project objects. Prints a menu for the user 
 an action from and has a method for each action to edit the necessary tasks and projects.
  */
 
-package cs141.landon;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
