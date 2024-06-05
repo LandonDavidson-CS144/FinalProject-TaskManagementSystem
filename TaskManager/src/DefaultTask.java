@@ -28,16 +28,16 @@ public class DefaultTask extends Task {
         System.out.println("3. Cancel");
         System.out.print("Which Property would you like to edit? ");
         switch (input.nextInt()) {
-            case 1 -> {
+		case 1: {
                 System.out.print("What is the new task name? ");
                 input.nextLine();
                 name = input.nextLine();
             }
-            case 2 -> {
+	    case 2:{
                 System.out.print("What is the new priority? (true or false) ");
                 priority = input.nextBoolean();
             }
-            case 3 -> {
+	    case 3: {
                 return;
             }
         }

@@ -20,13 +20,13 @@ public class ProjectManagementSystem {
         boolean running = true;
         while (running) {
             switch (obj.printMenu()) {
-		    case 1: obj.addProject();
-		    case 2: obj.addTask();
-		    case 3: obj.print();
-		    case 4: obj.editTask();
-		    case 5: obj.removeTask();
-		    case 6: obj.removeProject();
-		    case 7: running = false;
+                case 1 -> obj.addProject();
+                case 2 -> obj.addTask();
+                case 3 -> obj.print();
+                case 4 -> obj.editTask();
+                case 5 -> obj.removeTask();
+                case 6 -> obj.removeProject();
+                case 7 -> running = false;
             }
         }
     }
