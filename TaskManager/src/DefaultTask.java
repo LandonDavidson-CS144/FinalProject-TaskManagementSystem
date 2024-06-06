@@ -22,10 +22,12 @@ public class DefaultTask extends Task {
                 System.out.print("What is the new task name? ");
                 input.nextLine();
                 name = input.nextLine();
+                break;
             }
 	    case 2:{
                 System.out.print("What is the new priority? (true or false) ");
                 priority = input.nextBoolean();
+                break;
             }
 	    case 3: {
                 return;
