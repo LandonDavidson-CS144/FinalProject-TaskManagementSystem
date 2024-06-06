@@ -12,12 +12,12 @@ public class ProjectManagementSystem {
         boolean running = true;
         while (running) {
             switch (obj.printMenu()) {
-		    case 1: obj.addProject();
-		    case 2: obj.addTask();
-		    case 3: obj.print();
-		    case 4: obj.editTask();
-		    case 5: obj.removeTask();
-		    case 6: obj.removeProject();
+		    case 1: obj.addProject(); break;
+		    case 2: obj.addTask(); break;
+		    case 3: obj.print(); break;
+		    case 4: obj.editTask(); break;
+		    case 5: obj.removeTask(); break;
+		    case 6: obj.removeProject(); break;
 		    case 7: running = false;
             }
         }
@@ -64,8 +64,8 @@ public class ProjectManagementSystem {
         System.out.println("2. Amount of tasks (most first)");
         System.out.print("Would you like to print projects alphabetically or by amount of tasks? ");
         switch (input.nextInt()) {
-            case 1: sortAlphabetically();
-            case 2: sortByTasks();
+            case 1: projects.sort(Comparator.comparing(project -> project.name)); break;
+            case 2: projects.sort((project, t1) -> t1.tasks.size() - project.tasks.size()); break;
         }
         System.out.println("\n-----Printing projects now-----");
         for (Project project : projects) {
@@ -74,14 +74,6 @@ public class ProjectManagementSystem {
         System.out.println("\nPress enter to continue");
         input.nextLine();
         input.nextLine();
-    }
-
-    public void sortAlphabetically() {
-        projects.sort(Comparator.comparing(project -> project.name));
-    }
-
-    public void sortByTasks() {
-        projects.sort((project, t1) -> t1.tasks.size() - project.tasks.size());
     }
 
     public void editTask() {
