@@ -7,7 +7,7 @@ We use a Task abstract class to create the general task object used for both reg
 
 ## Flow/class Diagram
 
-![Flow Diagram](/home/landond/Downloads/Screenshot_20240605_204057.png)
+![Flow Diagram](/home/landond/CodingProjects/IdeaProjects/CS144/FinalProject-TaskManagementSystem/FlowDiagram.png)
 
 ## Implementation
 The project is implemented using two levels of arrayLists, the first level inside each project object storing that projects task objects, and the second inside the ProjectManagementSystem object storing each of the projects. The UI menu is a simple switch statement which takes the number the user typed and selects the necessary function
