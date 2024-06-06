@@ -13,10 +13,6 @@ public class Project {
         tasks.add(new DefaultTask(taskName, priority));
     }
 
-    public void addTask(String taskName, boolean priority, Date taskDate) {
-        tasks.add(new DatedTask(taskName, priority, taskDate));
-    }
-
     public Task findTask(String name) {
         for (Task task : tasks) {
             if (task.getName().equals(name)) {
