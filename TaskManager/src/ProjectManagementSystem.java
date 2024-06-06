@@ -1,13 +1,5 @@
-/*
-Programmer: Landon Davidson
-Section: 27258
-Program Name: ProjectManagementSystem
-
-Description: Main program to manage Project objects. Prints a menu for the user to choose
-an action from and has a method for each action to edit the necessary tasks and projects.
- */
-
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class ProjectManagementSystem {
@@ -67,6 +59,14 @@ public class ProjectManagementSystem {
     }
 
     public void print() {
+        System.out.println();
+        System.out.println("1. Alphabetically");
+        System.out.println("2. Amount of tasks (most first)");
+        System.out.print("Would you like to print projects alphabetically or by amount of tasks? ");
+        switch (input.nextInt()) {
+            case 1: sortAlphabetically();
+            case 2: sortByTasks();
+        }
         System.out.println("\n-----Printing projects now-----");
         for (Project project : projects) {
             project.print();
@@ -74,6 +74,14 @@ public class ProjectManagementSystem {
         System.out.println("\nPress enter to continue");
         input.nextLine();
         input.nextLine();
+    }
+
+    public void sortAlphabetically() {
+        projects.sort(Comparator.comparing(project -> project.name));
+    }
+
+    public void sortByTasks() {
+        projects.sort((project, t1) -> t1.tasks.size() - project.tasks.size());
     }
 
     public void editTask() {

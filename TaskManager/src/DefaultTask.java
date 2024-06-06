@@ -1,13 +1,3 @@
-/*
-Programmer: Landon Davidson
-Section: 27258
-Program Name: DefaultTask
-
-Description: Child class of the Task class which overrides Task's methods
-printTask() and editTask() to more easily change the default behavior without messing
-up other tasks.
-*/
-
 import java.util.Scanner;
 
 public class DefaultTask extends Task {

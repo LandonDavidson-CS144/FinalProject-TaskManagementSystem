@@ -1,12 +1,3 @@
-/*
-Programmer: Landon Davidson
-Section: 27258
-Program Name: Task
-
-Description: Abstract class that defines a basic printTask() method and an abstract
-editTask() method.
- */
-
 import java.util.Scanner;
 
 public abstract class Task {

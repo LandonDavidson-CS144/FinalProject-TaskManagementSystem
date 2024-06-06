@@ -1,13 +1,3 @@
-/*
-Programmer: Landon Davidson
-Section: 27258
-Program Name: Project
-
-Description: Uses a composite ArrayList of Task objects to easily organize tasks that
-belong to each project. Has methods to add default and dated tasks, find a tasks index
-and remove a task from specified index.
- */
-
 import java.util.ArrayList;
 import java.util.Date;
 
